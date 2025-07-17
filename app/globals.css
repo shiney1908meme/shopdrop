@@ -333,6 +333,16 @@ svg {
     cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Page transition optimization - only transform, no opacity */
+.page-transition-enter {
+  transform: translateY(12px) scale(0.99);
+}
+
+.page-transition-enter-active {
+  transform: translateY(0) scale(1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Ensure smooth theme transitions for reduced motion users */
 @media (prefers-reduced-motion: reduce) {
   html,
@@ -353,6 +363,13 @@ svg {
   }
 
   .hover-lift {
+    transition: none !important;
+  }
+
+  /* Disable page transitions for reduced motion */
+  .page-transition-enter,
+  .page-transition-enter-active {
+    transform: none !important;
     transition: none !important;
   }
 }
