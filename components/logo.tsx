@@ -26,7 +26,6 @@ export function Logo({
   priority = false,
 }: LogoProps) {
   const [mounted, setMounted] = useState(false)
-  const [loadingState, setLoadingState] = useState<"loading" | "loaded" | "error">("loading")
 
   useEffect(() => {
     setMounted(true)
@@ -34,7 +33,7 @@ export function Logo({
 
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
-    return <div className={`w-auto h-auto bg-gray-200 dark:bg-gray-700 animate-pulse rounded ${className}`} />
+    return <div className={`w-auto h-auto bg-gray-200 dark:bg-gray-700 rounded ${className}`} />
   }
 
   // Determine effective dark mode
@@ -43,15 +42,6 @@ export function Logo({
   // Logo selection logic
   const logoSrc = getLogoSrc(variant, effectiveDarkMode)
 
-  const handleLoad = () => {
-    setLoadingState("loaded")
-  }
-
-  const handleError = () => {
-    console.warn(`Logo failed to load: ${logoSrc}`)
-    setLoadingState("error")
-  }
-
   const logoElement = (
     <div className={`header-logo ${variant === "header" ? "header-mobile-padding" : ""}`}>
       <Image
@@ -59,25 +49,14 @@ export function Logo({
         alt="Shopdrop - Courier Matchmaking Made Simple"
         width={width || 200}
         height={height || 60}
-        className={`
-          ${className} 
-          ${loadingState === "loading" ? "opacity-0" : "opacity-100"}
-          theme-transition
-        `}
+        className={`${className} theme-transition`}
         priority={priority || variant === "header" || variant === "hero"}
         style={{
           height: "auto",
           background: "transparent",
         }}
-        onLoad={handleLoad}
-        onError={handleError}
         quality={100}
       />
-
-      {/* Loading placeholder */}
-      {loadingState === "loading" && (
-        <div className="absolute inset-0 w-auto h-auto bg-gray-200 dark:bg-gray-700 animate-pulse rounded" />
-      )}
     </div>
   )
 
