@@ -216,38 +216,33 @@ export default function HomePage() {
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               <Link
                 href="/"
-                className="relative text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-sm xl:text-base font-medium group"
+                className="nav-link-active text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-sm xl:text-base font-medium"
               >
                 Home
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#79CCC4] transition-all duration-200 ease-out group-hover:w-full"></span>
               </Link>
               <Link
                 href="/about"
-                className="relative text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-sm xl:text-base font-medium group"
+                className="nav-link-hover text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-sm xl:text-base font-medium"
               >
                 About
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#79CCC4] transition-all duration-200 ease-out group-hover:w-full"></span>
               </Link>
               <a
                 href="#how-it-works"
-                className="relative text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-sm xl:text-base font-medium group"
+                className="nav-link-hover text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-sm xl:text-base font-medium"
               >
                 How It Works
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#79CCC4] transition-all duration-200 ease-out group-hover:w-full"></span>
               </a>
               <Link
                 href="/faq"
-                className="relative text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-sm xl:text-base font-medium group"
+                className="nav-link-hover text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-sm xl:text-base font-medium"
               >
                 FAQ
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#79CCC4] transition-all duration-200 ease-out group-hover:w-full"></span>
               </Link>
               <Link
                 href="/contact"
-                className="relative text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-sm xl:text-base font-medium group"
+                className="nav-link-hover text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-sm xl:text-base font-medium"
               >
                 Contact
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#79CCC4] transition-all duration-200 ease-out group-hover:w-full"></span>
               </Link>
               <Link href="/partner">
                 <Button

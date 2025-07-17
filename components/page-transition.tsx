@@ -19,14 +19,14 @@ export function PageTransition({ children }: PageTransitionProps) {
     // Reset transition state after animation completes
     const timer = setTimeout(() => {
       setIsTransitioning(false)
-    }, 250) // Slightly longer than CSS transition duration
+    }, 300) // Slightly longer than CSS transition duration
 
     return () => clearTimeout(timer)
   }, [pathname])
 
   return (
     <div
-      className={`transition-transform duration-200 ease-out ${
+      className={`transition-transform duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
         isTransitioning ? "transform translate-y-3 scale-[0.99]" : "transform translate-y-0 scale-100"
       }`}
     >

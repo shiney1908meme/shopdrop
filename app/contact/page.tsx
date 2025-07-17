@@ -40,19 +40,19 @@ export default function ContactPage() {
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               <Link
                 href="/"
-                className="text-gray-700 dark:text-gray-300 hover:text-[#79CCC4] transition-all duration-200 text-sm xl:text-base font-medium"
+                className="nav-link-hover text-gray-700 dark:text-gray-300 hover:text-[#79CCC4] transition-all duration-200 text-sm xl:text-base font-medium"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-gray-700 dark:text-gray-300 hover:text-[#79CCC4] transition-all duration-200 text-sm xl:text-base font-medium"
+                className="nav-link-hover text-gray-700 dark:text-gray-300 hover:text-[#79CCC4] transition-all duration-200 text-sm xl:text-base font-medium"
               >
                 About
               </Link>
               <Link
                 href="/contact"
-                className="text-[#79CCC4] transition-all duration-200 text-sm xl:text-base font-medium"
+                className="nav-link-active text-[#79CCC4] transition-all duration-200 text-sm xl:text-base font-medium"
               >
                 Contact
               </Link>
