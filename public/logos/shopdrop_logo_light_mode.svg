@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Transparent background -->
+  <rect width="100%" height="100%" fill="none"/>
+  
+  <!-- Shopping bag outline -->
+  <path d="M160,150 L350,150 L350,300 L160,300 Z" fill="none" stroke="#79CCC4" stroke-width="12"/>
+  
+  <!-- Bag handle -->
+  <path d="M200,150 C200,100 310,100 310,150" fill="none" stroke="#79CCC4" stroke-width="12"/>
+  
+  <!-- Arrow inside bag -->
+  <polygon points="260,220 300,240 260,260" fill="#79CCC4"/>
+  
+  <!-- SHOPDROP text -->
+  <text x="50%" y="400" font-size="64" text-anchor="middle" font-family="Arial, sans-serif" fill="#000000">
+    SHOPDROP
+  </text>
+</svg>
